@@ -41,12 +41,14 @@
       return false;
     }
 
-    var genderField1 = document.forms["personalDetailsForm"] ["sex1"].value;
-    var genderField2 = document.forms["personalDetailsForm"] ["sex2"].value;
-    if ((genderField1.checked == false) && (genderField2.checked == false )) {
-      alert("Town/City must be filled out");
+
+
+    var emailAddress = document.forms["personalDetailsForm"] ["EmailAddressInput"].value;
+    if (emailAddress == null  || emailAddress == "") {
+      alert("emailAddress must be filled out");
       return false;
     }
+
     $('#dvPersonalDetails').hide(); 
      $('#dvCarDetails').show();
 
@@ -57,7 +59,23 @@
   }
 
   function showPersonalDetails() {
+    var model = document.forms["carDetailsForm"] ["txtModel"].value;
+    if (model == null  || model == "") {
+      alert("model must be filled out");
+      return false;
+    }
 
+    var carAge = document.forms["carDetailsForm"] ["numberAge"].value;
+    if (carAge == null  || carAge == "") {
+      alert("carAge must be filled out");
+      return false;
+    }
+
+    var engineSize = document.forms["carDetailsForm"] ["number"].value;
+    if (engineSize == null  || engineSize == "") {
+      alert("engineSize must be filled out");
+      return false;
+    }
 
 
     $('#dvPersonalDetails').show(); 
