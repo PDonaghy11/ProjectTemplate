@@ -50,6 +50,7 @@
     }*/
 
     $('#dvPersonalDetails').hide();
+    $('#dvQuoteDetails').hide();
     $('#dvCarDetails').show();
     
 
@@ -80,6 +81,8 @@
 
     
     $('#dvCarDetails').hide();
+    $('#dvQuoteDetails').hide();
+
     $('#dvPersonalDetails').show(); 
      
 
@@ -91,6 +94,7 @@
   function showQuoteDetails() {
     
     $('#dvCarDetails').hide();
+    $('#dvPersonalDetails').hide();
     $('#dvQuoteDetails').show(); 
      
       // Hide the car details section (dvCarDetails)
@@ -98,25 +102,31 @@
       // Show the quote section (dvPersonalDetails)
   }
 
-  /*function getQuote() {
+  function getQuote() {
 
     // Perform validation to test that all data has been entered
 
-    if (/* Page is Valid )
-    {
+var emptyFields + validateFields("dvCarDetails");
 
-      // Get the values from the page elements that you need to create your JSON
-
+if (emptyFields === 0)
+{
+  var gender = $("#dvPersonalDetails input:radio[name=sex]:checked").val();
+  var age = $("#numberAge").val();
+  var yearsNoClaims = $("#ddlNCB option:selected").val();
+  var costOfCar = $("#numberEstimatedValue").val();
+  var carStorage = $("#ddlModelStorage").val();
       $.ajax({
           type: "GET",
           url: "http://localhost:53753/api/rating/CalculateRates",
-          data: { /* create JSON here  }
+          data: {gender:gender, age:age, noClaimsBonus:yearsNoClaims, costOfCar:costOfCar, carStorage:carStorage}
         }).done(function(msg) {
+          $("txtQuote").text(msg.result.toFixed(2));
+          showQuoteDetails();
           // Put the return value into Label created on quote details
           // Hide the Car Details section
           // Display the quote details page
       });
-  }*/
+  }
 
 //################################# Helper Functions - look at these when validating and changing section #########################################
 
