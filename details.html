@@ -201,7 +201,7 @@
 
 
             <div class="form-group">
-                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" />
+                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showQuoteDetails()" />
                 <input id="btnBack" value="Back" class="btn btn-default btn-sm btn-success" onclick="showPersonalDetails()" />
               </div>
               <div class="col-md-4">
@@ -214,8 +214,41 @@
 
       <!-- WRAP Quote DETAILS FORM IN CHILD PANEL -->
       <div id="dvQuoteDetails" class="dvQuoteDetails">
+        
+<h1>Quotes</h1>
+<p>
+   Here is the insurance Qutoe that we can offer you:
+ </p>
+ <div class="row">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-md-2">Quote price £</label>
+      <div class="col-md-4">
+        <label id="txtQuote" class="control-label col-md-2" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-4">
+        <input id="btnQuoteBack" class="btn btn-success" onclick="showCarDetails()" />
+        </div>
+      </div>
+      </form
+    </div>
+  </div>
+
+
+
+        <div class="form-group">
+            
+            <input id="btnBack" value="Back" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" />
+          </div>
+          <div class="col-md-4">
+        </div>
+
         <!-- The display fields for the quote will be added here -->
       </div>
+
 
 <!--#######################################################################################################################################################
      Do not change any of the code below this comment to begin with, it is precompleted so that you get more time doing the actual challenges and not

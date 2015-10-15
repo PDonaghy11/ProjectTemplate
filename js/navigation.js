@@ -21,7 +21,7 @@
   });
 
   function showCarDetails() {
-
+/*
 
     var nameField = document.forms["personalDetailsForm"] ["nameInput"].value;
     if (nameField == null  || nameField == "") {
@@ -47,10 +47,11 @@
     if (emailAddress == null  || emailAddress == "") {
       alert("emailAddress must be filled out");
       return false;
-    }
+    }*/
 
-    $('#dvPersonalDetails').hide(); 
-     $('#dvCarDetails').show();
+    $('#dvPersonalDetails').hide();
+    $('#dvCarDetails').show();
+    
 
     // Hide the personal details section (dvPersonalDetails)
     // Hide the quote section (dvQuoteDetails)
@@ -59,7 +60,7 @@
   }
 
   function showPersonalDetails() {
-    var model = document.forms["carDetailsForm"] ["txtModel"].value;
+   /* var model = document.forms["carDetailsForm"] ["txtModel"].value;
     if (model == null  || model == "") {
       alert("model must be filled out");
       return false;
@@ -75,11 +76,12 @@
     if (engineSize == null  || engineSize == "") {
       alert("engineSize must be filled out");
       return false;
-    }
+    }*/
 
-
+    
+    $('#dvCarDetails').hide();
     $('#dvPersonalDetails').show(); 
-     $('#dvCarDetails').hide();
+     
 
       // Hide the car details section (dvCarDetails)
       // Hide the quote section (dvQuoteDetails)
@@ -87,6 +89,10 @@
   }
 
   function showQuoteDetails() {
+    
+    $('#dvCarDetails').hide();
+    $('#dvQuoteDetails').show(); 
+     
       // Hide the car details section (dvCarDetails)
       // Hide the personal details section (dvQuoteDetails)
       // Show the quote section (dvPersonalDetails)
